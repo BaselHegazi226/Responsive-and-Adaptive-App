@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_app_test_1/widgets/media_query_apply.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,34 +26,8 @@ class MyApp extends StatelessWidget {
             ),
           ),
         ),
-        body: ContainerColumn(),
+        body: MediaQueryApply(),
       ),
-    );
-  }
-}
-
-class ContainerColumn extends StatelessWidget {
-  const ContainerColumn({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    var size = MediaQuery.sizeOf(context);
-    return Column(
-      spacing: 16,
-      children: [
-        Container(
-          height: size.height * .2,
-          color: Colors.red,
-        ),
-        Container(
-          height: size.height * .2,
-          color: Colors.brown,
-        ),
-        Container(
-          height: size.height * .2,
-          color: Colors.green,
-        ),
-      ],
     );
   }
 }
