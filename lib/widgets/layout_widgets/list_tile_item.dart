@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class ListTileItem extends StatelessWidget {
   final int index;
-  const ListTileItem({super.key, required this.index});
+  final Color color;
+  const ListTileItem({super.key, required this.index,req, required this.color,});
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class ListTileItem extends StatelessWidget {
       margin: EdgeInsets.only(
         bottom: 16,
       ),
-      color: Colors.amber,
+      color: color,
       height: 48,
       child: ListTile(
         title: Text(

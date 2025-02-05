@@ -13,35 +13,57 @@ class _DesktopLayoutState extends State<DesktopLayout> {
   int number = 1;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 48,
-      color: Colors.grey,
-      child: Row(
-        children: [
-          Expanded(
-            child: ListView.builder(
-              itemBuilder: (context, index) {
-                return GestureDetector(
-                  onTap: () {
-                    number = index + 1;
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) {
-                          return ItemDetailsView(
-                            number: index + 1,
-                          );
-                        },
-                      ),
-                    );
-                  },
-                  child: ListTileItem(index: index),
-                );
-              },
-            ),
+    return Row(
+      children: [
+        Expanded(
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () {
+                  number = index + 1;
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return ItemDetailsView(
+                          number: index + 1,
+                        );
+                      },
+                    ),
+                  );
+                },
+                child: ListTileItem(
+                  index: index,
+                  color: Colors.amber,
+                ),
+              );
+            },
           ),
-          Text('data of index : $number')
-        ],
-      ),
+        ),
+        Expanded(
+          child: ListView.builder(
+            itemBuilder: (context, index) {
+              return GestureDetector(
+                onTap: () {
+                  number = index + 1;
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return ItemDetailsView(
+                          number: index + 1,
+                        );
+                      },
+                    ),
+                  );
+                },
+                child: ListTileItem(
+                  index: index,
+                  color: Colors.transparent,
+                ),
+              );
+            },
+          ),
+        ),
+      ],
     );
   }
 }
