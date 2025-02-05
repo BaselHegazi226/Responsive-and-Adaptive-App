@@ -33,7 +33,6 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                 },
                 child: ListTileItem(
                   index: index,
-                  color: Colors.amber,
                 ),
               );
             },
