@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+import 'package:responsive_app_test_1/widgets/layout_widgets/item_details_view.dart';
+import 'package:responsive_app_test_1/widgets/layout_widgets/list_tile_item.dart';
+
+class DesktopLayout extends StatefulWidget {
+  const DesktopLayout({super.key});
+
+  @override
+  State<DesktopLayout> createState() => _DesktopLayoutState();
+}
+
+class _DesktopLayoutState extends State<DesktopLayout> {
+  int number = 1;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 48,
+      color: Colors.grey,
+      child: Row(
+        children: [
+          Expanded(
+            child: ListView.builder(
+              itemBuilder: (context, index) {
+                return GestureDetector(
+                  onTap: () {
+                    number = index + 1;
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) {
+                          return ItemDetailsView(
+                            number: index + 1,
+                          );
+                        },
+                      ),
+                    );
+                  },
+                  child: ListTileItem(index: index),
+                );
+              },
+            ),
+          ),
+          Text('data of index : $number')
+        ],
+      ),
+    );
+  }
+}
