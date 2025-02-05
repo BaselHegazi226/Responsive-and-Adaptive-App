@@ -42,13 +42,17 @@ class ListTileItem extends StatelessWidget {
   final int index;
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(
-        '${index + 1}',
-        style: TextStyle(
-          color: Colors.white,
-          fontSize: 24,
-          fontWeight: FontWeight.bold,
+    return Container(
+      color: Colors.amber.withAlpha(128),
+      height: 24,
+      child: ListTile(
+        title: Text(
+          '${index + 1}',
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ),
     );
