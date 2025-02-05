@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MediaQueryApply extends StatelessWidget {
+  static String id = 'Media Query Apply';
   const MediaQueryApply({super.key});
 
   @override
