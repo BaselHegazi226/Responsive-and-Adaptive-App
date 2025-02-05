@@ -26,3 +26,30 @@ class MediaQueryApply extends StatelessWidget {
     );
   }
 }
+
+class MediaQueryApp extends StatelessWidget {
+  const MediaQueryApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: MediaQueryApply.id,
+      home: Scaffold(
+        appBar: AppBar(
+          title: Title(
+            color: Colors.red,
+            child: Text(
+              'Media Query',
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 24,
+              ),
+            ),
+          ),
+        ),
+        body: MediaQueryApply(),
+      ),
+    );
+  }
+}
