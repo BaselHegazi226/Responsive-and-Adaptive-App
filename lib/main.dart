@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_app_test_1/widgets/expanded_app/expanded_app.dart';
+import 'package:responsive_app_test_1/widgets/flexible_widget_app/flexible_widget_app.dart';
 
 void main() {
-  runApp(const ExpandedApp());
+  runApp(const FlexibleWidgetApp());
 }
