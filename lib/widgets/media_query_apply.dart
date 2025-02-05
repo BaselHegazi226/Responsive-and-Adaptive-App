@@ -7,22 +7,36 @@ class MediaQueryApply extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var size = MediaQuery.sizeOf(context);
-    return Column(
-      spacing: 16,
-      children: [
-        Container(
-          height: size.height * .2,
+    return Scaffold(
+      appBar: AppBar(
+        title: Title(
           color: Colors.red,
+          child: Text(
+            'Media Query',
+            style: TextStyle(
+              color: Colors.black,
+              fontSize: 24,
+            ),
+          ),
         ),
-        Container(
-          height: size.height * .2,
-          color: Colors.brown,
-        ),
-        Container(
-          height: size.height * .2,
-          color: Colors.green,
-        ),
-      ],
+      ),
+      body: Column(
+        spacing: 16,
+        children: [
+          Container(
+            height: size.height * .2,
+            color: Colors.red,
+          ),
+          Container(
+            height: size.height * .2,
+            color: Colors.brown,
+          ),
+          Container(
+            height: size.height * .2,
+            color: Colors.green,
+          ),
+        ],
+      ),
     );
   }
 }
@@ -35,21 +49,7 @@ class MediaQueryApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: MediaQueryApply.id,
-      home: Scaffold(
-        appBar: AppBar(
-          title: Title(
-            color: Colors.red,
-            child: Text(
-              'Media Query',
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 24,
-              ),
-            ),
-          ),
-        ),
-        body: MediaQueryApply(),
-      ),
+      home: MediaQueryApply(),
     );
   }
 }
