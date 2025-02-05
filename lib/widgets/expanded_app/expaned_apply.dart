@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class ExpandApply extends StatelessWidget {
+class ExpandedWidgetApply extends StatelessWidget {
   static String id = 'Expanded Apply';
-  const ExpandApply({super.key});
+  const ExpandedWidgetApply({super.key});
 
   @override
   Widget build(BuildContext context) {
